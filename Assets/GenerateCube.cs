@@ -37,43 +37,48 @@ public class GenerateCube : MonoBehaviour
         // depends on the way the mesh surface itself is defined (step 3).
         mesh.SetVertices(new[]
         {
+            //x-> Right / Left  y-> Top / Bottom    z-> Back / Front
             // Top face
-            new Vector3(-1.0f, 1.0f, -1.0f),
-            new Vector3(-1.0f, 1.0f, 1.0f),
-            new Vector3(1.0f, 1.0f, 1.0f),
+            new Vector3(-1.0f, 1.0f, -1.0f), //TOP_FRONT_LEFT
+            new Vector3(-1.0f, 1.0f, 1.0f), //TOP_BACK_LEFT
+            new Vector3(1.0f, 1.0f, 1.0f),  //TOP_BACK_RIGHT
             
-            new Vector3(-1.0f, 1.0f, -1.0f),
-            new Vector3(1.0f, 1.0f, 1.0f),
-            new Vector3(1.0f, 1.0f, -1.0f),
+            new Vector3(-1.0f, 1.0f, -1.0f),  //TOP_FRONT_LEFT
+            new Vector3(1.0f, 1.0f, 1.0f),  //TOP_BACK_RIGHT
+            new Vector3(1.0f, 1.0f, -1.0f), //TOP_FRONT_RIGHT
 
             // Bottom face
-            new Vector3(-1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, -1.0f, 1.0f),
-            new Vector3(-1.0f, -1.0f, 1.0f),
+            new Vector3(-1.0f, -1.0f, -1.0f),   //LEFT_BOT_FRONT
+            new Vector3(1.0f, -1.0f, 1.0f),     //RIGHT_BOT_BACK
+            new Vector3(-1.0f, -1.0f, 1.0f),    //LEFT_BOT_BACK
             
-            new Vector3(-1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, -1.0f, 1.0f),
+            new Vector3(-1.0f, -1.0f, -1.0f),   //LEFT_BOT_FRONT
+            new Vector3(1.0f, -1.0f, -1.0f),    //RIGHT_BOT_FRONT
+            new Vector3(1.0f, -1.0f, 1.0f),     //RIGHT_BOT_BACK
 
             // Left face
-            new Vector3(-1.0f, -1.0f, -1.0f),
-            new Vector3(-1.0f, -1.0f, 1.0f),
-            new Vector3(-1.0f, 1.0f, 1.0f),
+            new Vector3(-1.0f, -1.0f, -1.0f),   //LEFT_BOT_FRONT
+            new Vector3(-1.0f, -1.0f, 1.0f),    //LEFT_BOT_BACK
+            new Vector3(-1.0f, 1.0f, 1.0f),     //:EFT_TOP_BACK
             
-            new Vector3(-1.0f, -1.0f, -1.0f),
-            new Vector3(-1.0f, 1.0f, 1.0f),
-            new Vector3(-1.0f, 1.0f, -1.0f),
+            new Vector3(-1.0f, -1.0f, -1.0f),   //LEFT_BOT_FRONT
+            new Vector3(-1.0f, 1.0f, 1.0f),     //LEFT_TOP_BACK
+            new Vector3(-1.0f, 1.0f, -1.0f),    //LEFT_TOP_FRONT
 
             // Right face
-            new Vector3(1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, 1.0f, 1.0f),
-            new Vector3(1.0f, -1.0f, 1.0f),
+            new Vector3(1.0f, -1.0f, -1.0f),    //RIGHT_BOT_FRONT
+            new Vector3(1.0f, 1.0f, 1.0f),      //RIGHT_TOP_BACK
+            new Vector3(1.0f, -1.0f, 1.0f),     //RIGHT_BOT_BACK
             
-            new Vector3(1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, 1.0f, -1.0f),
-            new Vector3(1.0f, 1.0f, 1.0f)
+            new Vector3(1.0f, -1.0f, -1.0f),    //RIGHT_BOT_FRONT
+            new Vector3(1.0f, 1.0f, -1.0f),     //RIGHT_TOP_FRONT
+            new Vector3(1.0f, 1.0f, 1.0f)       //RIGHT_TOP_BACK
 
             // Define more vertices here!
+            //new Vector3(-,,),
+            //new Vector3(,-,),
+            //new Vector3(,,)
+
         });
 
         // Step 2: Define the vertex colours. There is a one-to-one index
